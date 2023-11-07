@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<main class="mb-5">
+    <div class="container">
+    
+        <div class="row mt-5">
+            <div class="col-md-4 offset-md-4">
+                <form action="?controller=user&action=connexion" method="post">
+                    <div class="card text-center">
+                        <div class="card-header">
+                            Connexion
+                        </div>
+                        <div class="card-body">
+                        {% if message %}
+                            {{ message }}
+                        {% endif %}
+                            <div class="ms-5 me-5 mb-5">
+                                <label for="login" class="form-label">Login</label>
+                                <input type="text" class="form-control" name="login" id="login">
+                            </div>
+                            <div class="ms-5 me-5 mb-3">
+                                <label for="password" class="form-label">Mot de passe</label>
+                                <input type="password" class="form-control" name="password" id="password">
+                            </div>
+                            <input type="submit" class="btn btn-primary mt-5" value="Se connecter">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

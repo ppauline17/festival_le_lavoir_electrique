@@ -1,0 +1,44 @@
+{% extends 'admin/dashboard.html.twig' %}
+
+{% block contenu %}
+
+<section>
+    <div class="container">
+        <h1 class="mt-4">Nos partenaires</h1>
+        <a href="ajout_artiste.php?id_categorie=<?= $id_categorie; ?>"><button class="btn btn-primary">Ajouter un artiste</button></a>
+        <table class="table" id="table">
+            <thead>
+                <tr>
+                    <th scope="col">Image</th>
+                    <th scope="col">Nom</th>
+                    <th scope="col">Modifier</th>
+                    <th scope="col">Supprimer</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for partenaire in partenaires %}
+                <tr>
+                    <td><img src="{{ partenaire.image }}" class="img-thumbnail" alt=""></td>
+                    <td>{{ partenaire.titre }}</td>
+                    <td><a href="update/article/{{ partenaire.id_article }}">Modifier</a></td>
+                    <td><a href="?controller=articles=action=delete&id_article={{ partenaire.id_article }}">Supprimer</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+    $(document).ready(function() {
+        $('#table').DataTable({
+            language: {
+                url: " French.json",
+                }
+        });
+    });
+</script>
+{% endblock %}

@@ -1,0 +1,34 @@
+#--------------------
+# Config
+#--------------------
+
+# Activation du module de réécriture d'url
+RewriteEngine on
+
+#--------------------
+# Règles de réécriture
+#--------------------
+
+#-----------pages-------------------------
+RewriteRule ^accueil$ index.php [L]
+RewriteRule ^association$ ?controller=pages&action=association [L]
+RewriteRule ^rejoindre$ ?controller=pages&action=rejoindre [L]
+RewriteRule ^festival$ ?controller=pages&action=festival [L]
+RewriteRule ^galerie$ ?controller=pages&action=galerie [L]
+RewriteRule ^news$ ?controller=pages&action=news [L]
+RewriteRule ^partenaires$ ?controller=pages&action=partenaires [L]
+
+#-----------admin--------------------
+RewriteRule ^admin/login$ ?controller=admin&action=connexion [L]
+RewriteRule ^admin/artistes$ ?controller=admin&action=artistes [L]
+RewriteRule ^admin/bureau$ ?controller=admin&action=bureau [L]
+RewriteRule ^admin/restauration$ ?controller=admin&action=restauration [L]
+RewriteRule ^admin/plan$ ?controller=admin&action=plan [L]
+RewriteRule ^admin/galerie$ ?controller=admin&action=galerie [L]
+RewriteRule ^admin/news$ ?controller=admin&action=news [L]
+RewriteRule ^admin/partenaires$ ?controller=admin&action=partenaires [L]
+RewriteRule ^admin/utilisateurs$ ?controller=admin&action=utilisateurs [L]
+
+#---------- admin crud --------------------
+RewriteRule ^update/artiste/([0-9]+)$ ?controller=admin&action=updateArtiste&id_artiste=$1 [L]
+RewriteRule ^update/article/([0-9]+)$ ?controller=articles=action=update&id_article=$1 [L]

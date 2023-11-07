@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Festival Le Lavoir Electrique</title>
+    <link rel="icon" type="image/png" href="img/logoorange.png">
+    <base href="https://pauline-pasquier-dev.fr/lavoirelectrique/">
+    <link rel="stylesheet" href="style/bootstrap.min.css">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <script src="vendor/tinymce/tinymce/tinymce.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z5RW6XH21J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Z5RW6XH21J');
+</script>
+<body>
+    <header class="sticky-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 d-flex align-items-center">
+                    <a href="accueil" class="d-flex align-items-center">
+                        <img class="logo" src="img/logoorange.png" alt="">
+                        <h1 class="titre">LE LAVOIR ELECTRIQUE</h1>
+                    </a>
+                </div>
+                <div class="col-md-8 d-flex align-items-center justify-content-end">
+                    <nav class="navbar navbar-expand-lg">
+                        <div class="container-fluid">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNav">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <a class="nav-link" aria-current="page" href="accueil" title="Accueil"><i class="bi bi-house"></i></a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" aria-current="page" href="association" title="L'Association">L'Asso</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" aria-current="page" href="rejoindre" title="Nous rejoindre">Nous rejoindre</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="festival" title="Le Festival">Le Festival</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="https://www.helloasso.com/associations/rock-en-boivre/boutiques/reb-boutique" target="_blank" title="Boutique Hello Asso">Boutique</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="galerie" title="Galerie">Galerie</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="news" title="News">News</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="partenaires" title="Nos partenaires">Nos partenaires</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    {% block body %}{% endblock %}
+    <footer>
+        <div class="container">
+            <div class="footer">
+                <p>Contact</p>
+                <p>Mentions légales</p>
+                <p>Politique de confidentialité</p>
+                <p>Partenaires</p>
+                {% if session %}
+                <p><a class="nav-link" href="admin/artistes">Administration</a></p>
+                <p><a class="nav-link" href="?controller=user&action=deconnexion">Deconnexion</a></p>
+                {% else %}
+                <p><a class="nav-link" href="admin/login">Connexion</a></p>
+                {% endif %}
+                <div class="reseaux">
+                    <a href="#" title="facebook" target="_blank"><i class="bi bi-facebook"></i></a>
+                    <a href="#" title="instagram" target="_blank"><i class="bi bi-instagram"></i></a>
+                    <a href="#" title="youtube" target="_blank"><i class="bi bi-youtube"></i></a>
+                </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script/bootstrap.bundle.min.js"></script>
+    {% block scripts %}{% endblock %}
+</body>
+</html>

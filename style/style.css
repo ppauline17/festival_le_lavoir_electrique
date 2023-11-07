@@ -1,0 +1,667 @@
+@font-face {
+  font-family: "Poppins", sans-serif;
+  src: url(../font/Poppins/Poppins-Thin.ttf);
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins", sans-serif;
+  src: url(../font/Poppins/Poppins-ThinItalic.ttf);
+  font-weight: 100;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Poppins", sans-serif;
+  src: url(../font/Poppins/Poppins-ExtraLight.ttf);
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins", sans-serif;
+  src: url(../font/Poppins/Poppins-ExtraLightItalic.ttf);
+  font-weight: 200;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Poppins", sans-serif;
+  src: url(../font/Poppins/Poppins-Light.ttf);
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins", sans-serif;
+  src: url(../font/Poppins/Poppins-LightItalic.ttf);
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Poppins", sans-serif;
+  src: url(../font/Poppins/Poppins-Regular.ttf);
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins", sans-serif;
+  src: url(../font/Poppins/Poppins-Italic.ttf);
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Poppins", sans-serif;
+  src: url(../font/Poppins/Poppins-Medium.ttf);
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins", sans-serif;
+  src: url(../font/Poppins/Poppins-MediumItalic.ttf);
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Poppins", sans-serif;
+  src: url(../font/Poppins/Poppins-SemiBold.ttf);
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins", sans-serif;
+  src: url(../font/Poppins/Poppins-SemiBoldItalic.ttf);
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Poppins", sans-serif;
+  src: url(../font/Poppins/Poppins-Bold.ttf);
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins", sans-serif;
+  src: url(../font/Poppins/Poppins-BoldItalic.ttf);
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Poppins", sans-serif;
+  src: url(../font/Poppins/Poppins-ExtraBold.ttf);
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins", sans-serif;
+  src: url(../font/Poppins/Poppins-ExtraBoldItalic.ttf);
+  font-weight: 800;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Poppins", sans-serif;
+  src: url(../font/Poppins/Poppins-Black.ttf);
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins", sans-serif;
+  src: url(../font/Poppins/Poppins-BlackItalic.ttf);
+  font-weight: 900;
+  font-style: italic;
+}
+@font-face {
+  font-family: "ShowCard";
+  src: url(../font/SHOWG.TTF);
+  font-weight: 400;
+  font-style: normal;
+}
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.bg-bleu {
+  background-color: #45A6B2;
+}
+
+.bg-noir {
+  background-color: #00222C;
+}
+
+.bg-orange {
+  background-color: #DE3516;
+}
+
+.bg-bleu2 {
+  background-color: #45A6B2;
+}
+
+.bg-noir2 {
+  background-color: #00222C;
+}
+
+.bg-orange2 {
+  background-color: #DE3516;
+}
+
+.bordure-bleu {
+  border: 6px solid #45A6B2;
+}
+
+.fil-ariane {
+  padding: 20px 0;
+  background-color: #00222C;
+  color: #f7f4e9;
+}
+.fil-ariane a {
+  text-decoration: none;
+  color: #f7f4e9;
+  font-weight: 600;
+}
+.fil-ariane .active {
+  color: #f7f4e9;
+}
+
+.card {
+  border: none;
+}
+
+header {
+  background-color: #00222C;
+  height: 90px;
+}
+header a {
+  text-decoration: none;
+}
+header .container {
+  height: 100%;
+}
+header .row {
+  height: 100%;
+}
+header .logo {
+  height: 41px;
+  margin-right: 11px;
+}
+header .titre {
+  font-family: "ShowCard";
+  font-size: 20px;
+  color: #f7f4e9;
+}
+header nav a {
+  font-family: "Poppins", sans-serif !important;
+  text-transform: uppercase;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  color: #f7f4e9 !important;
+}
+header nav a:hover {
+  transform: scale(1.05);
+}
+header nav i {
+  font-size: 24px;
+}
+header nav .navbar-nav {
+  display: flex;
+  align-items: center;
+}
+
+footer {
+  background-color: #00222C;
+  color: #f7f4e9;
+}
+footer .footer {
+  padding-top: 100px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer .footer p {
+  font-weight: 600;
+  font-size: 20px;
+}
+footer .footer i {
+  color: #f7f4e9;
+  font-size: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.accueil .top {
+  padding-top: 81px;
+  background-color: #00222C;
+}
+.accueil .top .card {
+  margin-bottom: 111px;
+  background-color: #00222C;
+}
+.accueil .top .card h5 {
+  margin-bottom: 50px;
+}
+.accueil .top .card h5 p {
+  color: #DE3516;
+  font-size: 64px;
+  font-weight: 800 !important;
+  line-height: 96px;
+  text-transform: uppercase;
+}
+.accueil .top .card p {
+  color: #f7f4e9;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  text-transform: capitalize;
+}
+.accueil .top .card .image {
+  position: relative;
+}
+.accueil .top .card .image .poisson {
+  height: 163px;
+  position: absolute;
+  top: -81.5px;
+  left: 40%;
+  animation: mouvement 3s linear infinite;
+}
+@keyframes mouvement {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(-10deg);
+  }
+  20% {
+    transform: rotate(0deg);
+  }
+}
+.accueil .top .ligne {
+  margin-top: 104px;
+  width: 100%;
+  height: 8px;
+  background: #DE3516;
+  border-radius: 13px;
+}
+.accueil .top h1 {
+  color: #f7f4e9;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  font-size: 64px;
+  padding: 15px;
+  margin: 0;
+}
+.accueil .artistes {
+  background-color: #f7f4e9;
+}
+.accueil .artistes .card {
+  margin-bottom: 100px;
+  background-color: #f7f4e9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.accueil .artistes .card img {
+  border-radius: 25px;
+  height: 260px;
+  width: 260px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.1s linear;
+}
+.accueil .artistes .card img:hover {
+  transform: scale(1.05);
+}
+.accueil .artistes .card h5 {
+  padding-top: 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 48px;
+}
+.accueil .artistes .modal .modal-header {
+  background-color: #00222C;
+}
+.accueil .artistes .modal .modal-header h1 {
+  color: #f7f4e9;
+  text-transform: uppercase;
+}
+.accueil .artistes .modal .modal-header .btn-close {
+  background-color: #f7f4e9;
+}
+.accueil .artistes .modal i {
+  color: #00222C;
+  font-size: 30px;
+  margin-right: 10px;
+}
+
+.asso .top {
+  padding-top: 81px;
+  background-color: #00222C;
+}
+.asso .top h5 {
+  color: #DE3516;
+  font-size: 64px;
+  font-weight: 800 !important;
+  line-height: 96px;
+  text-transform: uppercase;
+}
+.asso .top p {
+  color: #f7f4e9;
+}
+.asso .top .ligne {
+  margin-top: 104px;
+  width: 100%;
+  height: 8px;
+  background: #DE3516;
+  border-radius: 13px;
+}
+.asso .top h1 {
+  color: #f7f4e9;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  font-size: 64px;
+  padding: 15px;
+}
+.asso .top .story {
+  width: 40%;
+}
+.asso .top .carousel-trombinoscope {
+  width: 60%;
+  padding-top: 25px;
+  padding-left: 30px;
+}
+.asso .top .carousel-trombinoscope img {
+  height: 500px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.asso .trombinoscope {
+  padding-top: 100px;
+  background-color: #f7f4e9;
+}
+.asso .trombinoscope .membre {
+  margin-bottom: 125px;
+}
+.asso .trombinoscope .membre h5 {
+  text-align: center;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+}
+.asso .trombinoscope .membre .carte {
+  width: 80%;
+  height: 300px;
+  margin: 0 auto;
+  border-radius: 25px;
+  padding: 20px;
+}
+.asso .trombinoscope .membre .carte img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  height: 100%;
+  width: 100%;
+}
+.asso .trombinoscope .membre .card:hover {
+  transform: scale(1.05);
+}
+
+.rejoindre {
+  background-color: #f7f4e9;
+  padding-top: 162px;
+  padding-bottom: 100px;
+}
+.rejoindre h1 {
+  text-transform: uppercase;
+  color: #DE3516;
+  font-weight: 800;
+  font-size: 64px;
+  line-height: 96px;
+  margin-bottom: 50px;
+}
+.rejoindre button {
+  display: block;
+  margin: 0 auto;
+  margin-top: 40px;
+  padding: 14px 40px;
+  background: #DE3516;
+  border-radius: 29px;
+  border: none;
+  color: #f7f4e9;
+}
+.rejoindre button:hover {
+  transform: scale(1.05);
+}
+.rejoindre .adherent, .rejoindre .benevole {
+  padding-bottom: 50px;
+}
+.rejoindre p {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  color: #00222C;
+}
+.rejoindre img {
+  width: 100%;
+}
+.rejoindre .ligne {
+  width: 100%;
+  height: 8px;
+  background: #45A6B2;
+  border-radius: 13px;
+  margin-bottom: 50px;
+}
+
+.festival .plan {
+  padding-top: 78px;
+  background-color: #00222C;
+}
+.festival .plan h1 {
+  font-weight: 800;
+  font-size: 64px;
+  line-height: 96px;
+  text-transform: uppercase;
+  color: #DE3516;
+}
+.festival .plan img {
+  width: 100%;
+}
+.festival .plan .ligne {
+  margin: 50px 0;
+  width: 100%;
+  height: 8px;
+  background: #DE3516;
+  border-radius: 13px;
+}
+.festival .plan .programme {
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 96px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #f7f4e9;
+}
+.festival .horaires {
+  background-color: #f7f4e9;
+  padding-top: 110px;
+  padding-bottom: 200px;
+}
+.festival .horaires .frise {
+  width: 100%;
+  height: 87px;
+  background: #45A6B2;
+  border-radius: 43.5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.festival .horaires .point {
+  position: relative;
+  width: 43px;
+  height: 43px;
+  border-radius: 100%;
+  background: #ffffff;
+}
+.festival .horaires .point .trait {
+  position: absolute;
+  top: 55%;
+  left: 45%;
+  width: 5px;
+  height: 96px;
+  background-color: #DE3516;
+}
+.festival .horaires .point .artiste {
+  width: 120px;
+  position: absolute;
+  top: 130px;
+  left: -40px;
+  text-align: center;
+}
+.festival .horaires .point .artiste p {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #00222C;
+}
+.festival .restauration {
+  padding: 60px 0;
+  background-color: #00222C;
+}
+.festival .restauration h1 {
+  font-weight: 800;
+  font-size: 64px;
+  line-height: 96px;
+  text-transform: uppercase;
+  color: #45A6B2;
+}
+.festival .restauration .contenu {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  color: #f7f4e9;
+  padding: 50px 0;
+}
+.festival .restauration .ligne {
+  width: 100%;
+  height: 8px;
+  background: #45A6B2;
+  border-radius: 13px;
+}
+.festival .informations {
+  background-color: #00222C;
+}
+.festival .informations h1 {
+  text-align: end;
+  font-weight: 800;
+  font-size: 64px;
+  line-height: 96px;
+  text-transform: uppercase;
+  color: #DE3516;
+}
+.festival .informations p {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  color: #f7f4e9;
+}
+
+.galerie .top {
+  background-color: #00222C;
+  padding-top: 80px;
+  padding-bottom: 40px;
+}
+.galerie .top h1 {
+  font-weight: 800;
+  font-size: 64px;
+  line-height: 96px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #DE3516;
+}
+.galerie .medias {
+  background-color: #f7f4e9;
+  padding: 50px 0;
+}
+
+.news .top {
+  background-color: #00222C;
+}
+.news .top h1 {
+  padding-top: 80px;
+  padding-bottom: 50px;
+  font-weight: 800;
+  font-size: 64px;
+  line-height: 96px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #DE3516;
+}
+.news .article {
+  background-color: #f7f4e9;
+  padding: 50px 0;
+}
+.news .article .card {
+  background-color: #f7f4e9;
+  margin-bottom: 50px;
+}
+.news .article .card img {
+  width: 100%;
+  height: 215px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+.news .article .card .card-body {
+  position: relative;
+  padding: 0;
+}
+.news .article .card .card-body .ligne {
+  position: absolute;
+  left: -6px;
+  width: 100%;
+  height: 6px;
+  border-radius: 10px;
+}
+.news .article .card .card-body h5 {
+  padding-top: 20px;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 48px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #DE3516;
+}
+.news .article .card .card-body p {
+  padding: 0 66px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #00222C;
+}
+
+.partenaires .top {
+  background-color: #00222C;
+}
+.partenaires .top h1 {
+  font-weight: 800;
+  font-size: 64px;
+  line-height: 96px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #DE3516;
+  padding-top: 80px;
+  padding-bottom: 30px;
+}
+.partenaires .top .sponsor {
+  background-color: #f7f4e9;
+}
+.partenaires .top .sponsor img {
+  height: 100px;
+}/*# sourceMappingURL=style.css.map */

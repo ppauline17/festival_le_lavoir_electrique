@@ -1,0 +1,112 @@
+// accueil
+
+.accueil{
+    .top{
+        padding-top: 81px;
+        background-color: $bleu_fonce;
+        .card{
+            margin-bottom: 111px;
+            background-color: $bleu_fonce;
+            h5{
+                margin-bottom: 50px;
+                p{
+                    color: $orange;
+                    font-size: 64px;
+                    font-weight: 800 !important;
+                    line-height: 96px;
+                    text-transform: uppercase;
+                }
+            }
+            p{
+                color: $blanc;
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 36px;
+                text-transform: capitalize;
+            }
+            .image{
+                position: relative;
+                .poisson{
+                    height: 163px;;
+                    position: absolute;
+                    top:-81.5px;
+                    left: 40%;
+                    animation: mouvement 3s linear infinite;
+                }
+                @keyframes mouvement{
+                    0%{
+                        transform: rotate(0deg)
+                    }
+                    10%{
+                        transform: rotate(-10deg)
+                    }
+                    20%{
+                        transform: rotate(0deg)
+                    }
+                    100%{
+                    }
+                  }
+            }
+        }
+        .ligne{
+            margin-top: 104px;
+            width: 100%;
+            height: 8px;
+            background: $orange;
+            border-radius: 13px;
+        }
+        h1{
+            color: $blanc;
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: 700;
+            font-size: 64px;
+            padding: 15px;
+            margin: 0;
+        }
+    }
+    .artistes{
+        background-color: $blanc;
+        .card{
+            margin-bottom: 100px;
+            background-color: $blanc;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            img{
+                border-radius: 25px;
+                height: 260px;
+                width: 260px;
+                object-fit: cover;
+                transition: transform 0.1s linear;
+            }
+            img:hover{
+                transform: scale(1.05);
+            }
+            h5{
+                padding-top: 20px;
+                text-transform: uppercase;
+                font-weight: 600;
+                font-size: 32px;
+                line-height: 48px;
+            }
+        }
+        .modal{
+            .modal-header{
+                background-color: $bleu_fonce;
+                h1{
+                    color: $blanc;
+                    text-transform: uppercase;
+                }
+                .btn-close{
+                    background-color: $blanc;
+                }
+            }
+            i{
+                color: $bleu_fonce;
+                font-size: 30px;
+                margin-right: 10px;
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+// galerie
+
+.galerie{
+    .top{
+        background-color: $bleu_fonce;
+        padding-top: 80px;
+        padding-bottom: 40px;
+        h1{
+            font-weight: 800;
+            font-size: 64px;
+            line-height: 96px;
+            text-align: center;
+            text-transform: uppercase;
+            color: $orange;
+        }
+    }
+    .medias{
+        background-color: $blanc;
+        padding: 50px 0;
+    }
+}

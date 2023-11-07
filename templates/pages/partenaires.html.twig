@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<section class="fil-ariane">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="accueil">Accueil</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Nos partenaires</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+    <main class="partenaires">
+        <section class="top">
+            <div class="container">
+                <h1>Nos partenaires</h1>
+            </div>
+        </section>
+        <section class="sponsor">
+            <div class="container">
+                <div class="row">
+                    {% for partenaire in partenaires %}
+                    <div class="col-md-2 mb-3">
+                        <img src="{{ partenaire.image }}" class="img-thumbnail">
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+    </main>
+{% endblock %}

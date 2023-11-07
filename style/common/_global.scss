@@ -1,0 +1,57 @@
+// global
+
+
+* {
+	box-sizing : border-box;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 500;
+    
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+.bg-bleu{
+	background-color: $bleu;
+}
+
+.bg-noir{
+	background-color: $bleu_fonce;
+}
+
+.bg-orange{
+	background-color: $orange;
+}
+
+.bg-bleu2{
+	background-color: $bleu;
+}
+
+.bg-noir2{
+	background-color: $bleu_fonce;
+}
+
+.bg-orange2{
+	background-color: $orange;
+}
+
+.bordure-bleu{
+	border: 6px solid $bleu;
+}
+
+
+.fil-ariane{
+	padding: 20px 0;
+	background-color: $bleu_fonce;
+	color: $blanc;
+	a{
+		text-decoration: none;
+		color: $blanc;
+		font-weight: 600;
+	}
+	.active{
+		color: $blanc;
+	}
+}

@@ -1,0 +1,117 @@
+// festival
+
+.festival{
+    .plan{
+        padding-top: 78px;
+        background-color: $bleu_fonce;
+        h1{
+            font-weight: 800;
+            font-size: 64px;
+            line-height: 96px;
+            text-transform: uppercase;
+            color: $orange;
+        }
+        img{
+            width: 100%;
+        }
+        .ligne{
+            margin: 50px 0;
+            width: 100%;
+            height: 8px;
+            background: $orange;
+            border-radius: 13px;
+        }
+        .programme{
+            font-weight: 700;
+            font-size: 64px;
+            line-height: 96px;
+            text-align: center;
+            text-transform: uppercase;
+            color: $blanc;
+        }
+    }
+    .horaires{
+        background-color: $blanc;
+        padding-top: 110px;
+        padding-bottom: 200px;
+        .frise{
+            width: 100%;
+            height: 87px;
+            background: $bleu;
+            border-radius: 43.5px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .point{
+            position: relative;
+            width: 43px;
+            height: 43px;
+            border-radius: 100%;
+            background: #ffffff;
+            .trait {
+                position: absolute;
+                top: 55%;
+                left: 45%;
+                width: 5px;
+                height: 96px;
+                background-color: #DE3516;
+            }
+            .artiste{
+                width: 120px;
+                position: absolute;
+                top: 130px;
+                left: -40px;
+                text-align: center;
+                p{
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 24px;               
+                    text-transform: uppercase;
+                    color: $bleu_fonce;
+                }
+            }
+        }
+    }
+    .restauration{
+        padding: 60px 0;
+        background-color: $bleu_fonce;
+        h1{
+            font-weight: 800;
+            font-size: 64px;
+            line-height: 96px;
+            text-transform: uppercase;
+            color: $bleu;
+        }
+        .contenu{
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 30px;
+            color: $blanc;
+            padding: 50px 0;
+        }
+        .ligne{
+            width: 100%;
+            height: 8px;
+            background: $bleu;
+            border-radius: 13px;
+        }
+    }
+    .informations{
+        background-color: $bleu_fonce;
+        h1{
+            text-align: end;
+            font-weight: 800;
+            font-size: 64px;
+            line-height: 96px;
+            text-transform: uppercase;
+            color: $orange;
+        }
+        p{
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 30px;
+            color: $blanc;
+        }
+    }
+}

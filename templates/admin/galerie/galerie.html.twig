@@ -1,0 +1,64 @@
+{% extends 'admin/dashboard.html.twig' %}
+
+{% block contenu %}
+
+<section>
+    <div class="container">
+        <h1 class="mt-4">Galerie</h1>
+        <p>
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                Ajouter une image
+            </button>
+        </p>
+        <div class="collapse" id="collapseExample">
+            <div class="card card-body">
+                <form action="#" method="post">
+                    <div class="row mb-3">
+                        <div class="col-md-3">
+                            <label for="titre">Titre</label>
+                            <input type="text" name="titre" id="titre" class="form-control">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="image">Image</label>
+                            <input type="file" name="image" id="image" class="form-control">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-success">Ajouter</button>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+        {% for image in galerie %}
+            <div class="col mb-4">
+                <div class="card border" style="width: 18rem;">
+                    <img src="{{ image.image }}" class="card-img-top" alt="{{ image.titre }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ image.titre }}</h5>
+                        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-trash3"></i></button>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Etes vous sûr de vouloir supprimer l'image {{ image.titre }} ?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                            <a href="?controller=articles=action=delete&id_article={{ image.id_article }}"><button type="button" class="btn btn-success">Valider</button></a>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+        {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% endblock %}

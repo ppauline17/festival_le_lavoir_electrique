@@ -1,0 +1,73 @@
+{% extends 'admin/dashboard.html.twig' %}
+
+{% block contenu %}
+
+<section>
+    <div class="container">
+        <a href="admin/artistes"><button class="col offset-md-1 btn btn-danger mt-3">Retour</button></a>
+        <h1 class="mt-4">Ajouter un artiste</h1>
+        <form enctype="multipart/form-data" action ="?controller=articles&action=create" method="post">
+            <input id="id_categorie" name="id_categorie" type="hidden" value=5>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="col-md-12 mb-3">
+                        <label>Nom de l'artiste</label>
+                        <input type="text" class="form-control" name="titre">
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <label>Photo</label>
+                        <input type="file" class="form-control" aria-label="file example" name="image">
+                        <div class="feedback"></div>
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <label>Date et heure de Programmation</label>
+                        <input type="datetime-local" class="form-control" placeholder="Date et heure de programmation" name="date_evenement">
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <label for="facebook">Facebook</label>
+                        <input type="text" class="form-control" name="facebook" id="facebook">
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <label for="youtube">youtube</label>
+                        <input type="text" class="form-control" name="youtube" id="youtube">
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <label for="instagram">instagram</label>
+                        <input type="text" class="form-control" name="instagram" id="instagram">
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <label for="spotify">spotify</label>
+                        <input type="text" class="form-control" name="spotify" id="spotify">
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <label for="site_internet">site internet</label>
+                        <input type="text" class="form-control" name="site_internet" id="site_internet">
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label>Description de l'artiste</label>
+                    <textarea class="form-control" aria-label="contenu" placeholder="description de l'artiste" name="contenu" id="contenu"></textarea>
+                </div>
+            </div>
+            <input class="col offset-md-1 btn btn-success mt-3 mb-5" type="submit" value="Valider">
+        </form>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+    tinymce.init({
+        selector: '#contenu',
+        height: 500,
+        language: "fr_FR",
+        menubar: false,
+        toolbar: 'styles | ' +
+        'bold italic backcolor | alignleft aligncenter ' +
+        'alignright alignjustify',
+        content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }',
+    });
+
+</script>
+{% endblock %}

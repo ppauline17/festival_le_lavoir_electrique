@@ -1,0 +1,47 @@
+// nous rejoindre
+
+.rejoindre{
+    background-color: $blanc;
+    padding-top: 162px;
+    padding-bottom: 100px;
+    h1{
+        text-transform: uppercase;
+        color: $orange;
+        font-weight: 800;
+        font-size: 64px;
+        line-height: 96px;
+        margin-bottom: 50px;
+    }
+    button{
+        display: block;
+        margin: 0 auto;
+        margin-top: 40px;
+        padding: 14px 40px;
+        background: #DE3516;
+        border-radius: 29px;
+        border: none;
+        color: $blanc;
+    }
+    button:hover{
+        transform: scale(1.05);
+    }
+    .adherent, .benevole{
+        padding-bottom: 50px; 
+    }
+    p{
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 30px;
+        color: $bleu_fonce;
+    }
+    img{
+        width: 100%;
+    }
+    .ligne{
+        width: 100%;
+        height: 8px;
+        background: $bleu;
+        border-radius: 13px;
+        margin-bottom: 50px;
+    }
+}

@@ -1,0 +1,23 @@
+// partenaires
+
+.partenaires{
+    .top{
+    background-color: $bleu_fonce;
+    h1{
+        font-weight: 800;
+        font-size: 64px;
+        line-height: 96px;
+        text-align: center;
+        text-transform: uppercase;
+        color: $orange;
+        padding-top: 80px;
+        padding-bottom: 30px;
+    }
+    .sponsor{
+        background-color: $blanc;
+        img{
+            height: 100px;
+        }
+    }
+}
+}

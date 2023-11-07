@@ -1,0 +1,36 @@
+{% extends 'admin/dashboard.html.twig' %}
+
+{% block contenu %}
+
+<section>
+    <div class="container">
+        <a href="?controller=admin&action=createArtiste"><button class="btn btn-primary mt-5">Ajouter un artiste</button></a>
+        <h3 class="mt-4">Liste des artistes</h3>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Image</th>
+                    <th scope="col">Nom</th>
+                    <th scope="col">Date évènement</th>
+                    <th scope="col">contenu</th>
+                    <th scope="col">Modifier</th>
+                    <th scope="col">Supprimer</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for artiste in artistes %}
+                <tr>
+                    <td><img src="{{ artiste.image }}" class="img-thumbnail" alt=""></td>
+                    <td>{{ artiste.titre }}</td>
+                    <td>{{ artiste.date_evenement }}</td>
+                    <td>{{ artiste.contenu|raw }}</td>
+                    <td><a href="update/artiste/{{ artiste.id_article }}">Modifier</a></td>
+                    <td><a href="?controller=articles&action=delete&id_article={{ artiste.id_article }}">Supprimer</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</section>
+
+{% endblock %}

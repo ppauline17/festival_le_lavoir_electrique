@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<main class="mt-5">
+{# Navigation #}
+    <section>
+        <div class="container">
+        <h2 class="mb-5">Administration</h2>
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link {% if artistes %}active{% endif %}" href="admin/artistes">Artistes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if membres %}active{% endif %}" href="admin/bureau">Membres du bureau</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if restauration %}active{% endif %}" href="admin/restauration">Restauration</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if plan %}active{% endif %}" href="admin/plan">Plan</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if galerie %}active{% endif %}" href="admin/galerie">Galerie</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if news %}active{% endif %}" href="admin/news">Les News</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if partenaires %}active{% endif %}" href="admin/partenaires">Nos partenaires</a>
+                </li>
+                {% if session == "Admin" %}
+                <li class="nav-item">
+                    <a class="nav-link {% if utilisateurs %}active{% endif %}" href="admin/utilisateurs">Utilisateurs du site</a>
+                </li>
+                {% endif %}
+            </ul>
+        </div>
+    </section>
+{# contenu #}
+{% block contenu %}{% endblock %}
+</main>
+{% endblock %}

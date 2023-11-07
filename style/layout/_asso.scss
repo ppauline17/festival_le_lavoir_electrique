@@ -1,0 +1,77 @@
+// asso
+
+.asso{
+    .top{
+        padding-top: 81px;
+        background-color: $bleu_fonce;
+        h5{
+            color: $orange;
+            font-size: 64px;
+            font-weight: 800 !important;
+            line-height: 96px;
+            text-transform: uppercase;
+        }
+        p{
+             color: $blanc;   
+        }
+        
+        .ligne{
+            margin-top: 104px;
+            width: 100%;
+            height: 8px;
+            background: $orange;
+            border-radius: 13px;
+        }
+        h1{
+            color: $blanc;
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: 700;
+            font-size: 64px;
+            padding: 15px;
+        }
+        .story{
+            width: 40%;
+        }
+        .carousel-trombinoscope{
+            width: 60%;
+            padding-top: 25px;
+            padding-left: 30px;
+            img{
+                height: 500px;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    .trombinoscope{
+        padding-top: 100px;
+        background-color: $blanc;
+        .membre{
+            margin-bottom: 125px;
+            h5{
+                text-align: center;
+                font-weight: 600;
+                font-size: 24px;
+                line-height: 36px;
+            }
+            .carte{
+                width: 80%;
+                height: 300px;
+                margin: 0 auto;
+                border-radius: 25px;
+                padding: 20px;
+                img{
+                    object-fit: cover;
+                    object-position: top;
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+            .card:hover{
+                transform: scale(1.05);
+            }
+        }
+        
+    }
+}

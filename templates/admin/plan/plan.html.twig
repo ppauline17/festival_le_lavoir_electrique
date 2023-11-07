@@ -1,0 +1,13 @@
+{% extends 'admin/dashboard.html.twig' %}
+
+{% block contenu %}
+
+<section class="mt-5 mb-5">
+    <div class="container">
+    {% for image in plan %}
+    <img src="{{ image.image }}" class="img-fluid" alt="">
+    {% endfor %}
+    </div>
+</section>
+
+{% endblock %}

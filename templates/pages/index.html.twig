@@ -1,0 +1,79 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<main class="accueil">
+    <section class="top">
+        <div class="container">
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-md-7">
+                        <div class="image">
+                            <img src="img/index.jpg" class="img-fluid rounded-start" alt="photo festival">
+                            <img class="poisson" src="img/logoorange.png" alt="">
+                        </div>
+                        
+                    </div>
+                    <div class="col-md-5">
+                        <div class="card-body">
+                            <div class="card-title">
+                                <p>LE LAVOIR</p>
+                                <p>ÉLECTRIQUE</p>
+                            </div>
+                            <p>11<sup>ème</sup> Lessive</p>
+                            <p>Le 1<sup>er</sup> Juillet 2023</p>
+                            <p>VOUNEUIL-SOUS-BIARD</p>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <div class="ligne"></div>
+            <h1>Artistes</h1>      
+        </div>
+    </section>
+    <section class="artistes">
+        <div class="container">
+            <div class="row">
+                {% for artiste in artistes %}
+                <div class="col-md-4">
+                    <a data-bs-toggle="modal" data-bs-target="#exampleModal{{ artiste.id_article }}">
+                        <div class="card p-5">
+                            <img src="{{ artiste.image }}" class="card-img" alt="...">
+                            <h5 class="card-title">{{ artiste.titre }}</h5>
+                        </div>
+                    </a>
+                </div> 
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal{{ artiste.id_article }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">{{ artiste.titre }}</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>{{ artiste.date_evenement }}</p>
+                        <p>{{ artiste.contenu | raw }}</p>
+                        <div class="reseaux">
+                        {% if artiste.facebook %}
+                                <a href="{{ artiste.facebook }}" title="facebook" target="_blank"><i class="bi bi-facebook"></i></a>
+                        {% endif %}
+                        {% if artiste.instagram %}
+                                <a href="{{ artiste.instagram }}" title="instagram" target="_blank"><i class="bi bi-instagram"></i></a>
+                        {% endif %}
+                        {% if artiste.youtube %}
+                                <a href="{{ artiste.youtube }}" title="youtube" target="_blank"><i class="bi bi-youtube"></i></a>
+                        {% endif %} 
+                        {% if artiste.spotify %}
+                                <a href="{{ artiste.spotify }}" title="spotify" target="_blank"><i class="bi bi-spotify"></i></a>
+                        {% endif %}  
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+                {% endfor %}  
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}

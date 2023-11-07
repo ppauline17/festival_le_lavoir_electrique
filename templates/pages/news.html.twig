@@ -1,0 +1,67 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<section class="fil-ariane">
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="accueil">Accueil</a></li>
+                <li class="breadcrumb-item active" aria-current="page">News</li>
+            </ol>
+        </nav>
+    </div>
+</section>
+<main class="news">
+    <section class="top">
+        <div class="container">
+            <h1 class="text-center">Les News</h1>
+        </div>
+    </section>
+    <section class="article">
+        <div class="container">
+        {% set bordure = "bordure-orange" %}
+        {% set background = "bg-orange" %}
+        {% set row = "row-reverse" %}
+
+        {% for info in news %}
+            {% if bordure == "bordure-bleu" %}
+                {% set bordure = "bordure-noir" %}
+            {% elseif bordure == "bordure-noir" %}
+                {% set bordure = "bordure-orange" %}
+            {% elseif bordure == "bordure-orange" %}
+                {% set bordure = "bordure-bleu" %}
+            {% endif %}
+
+            {% if background == "bg-bleu" %}
+                {% set background = "bg-noir" %}
+            {% elseif background == "bg-noir" %}
+                {% set background = "bg-orange" %}
+            {% elseif background == "bg-orange" %}
+                {% set background = "bg-bleu" %}
+            {% endif %}
+
+            {% if row == "row-reverse" %}
+                {% set row = "row" %}
+            {% elseif row == "row" %}
+                {% set row = "row-reverse" %}
+            {% endif %}
+
+            <div class="card">
+                <div class="{{ row }} g-0">
+                    <div class="col-md-3">
+                        <img src="{{ info.image }}" class="img-fluid rounded {{ bordure }}" alt="{{ info.titre }}">
+                    </div>
+                    <div class="col-md-9">
+                        <div class="card-body">
+                            <div class="ligne {{ background }}"></div>
+                            <h5 class="card-title">{{ info.titre }}</h5>
+                            <p class="card-text">{{ info.contenu|raw }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+        </div>
+    </section>
+</main>
+{% endblock %}
