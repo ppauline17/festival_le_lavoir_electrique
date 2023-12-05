@@ -151,6 +151,14 @@ html, body {
   border: 6px solid #45A6B2;
 }
 
+.bordure-orange {
+  border: 6px solid #DE3516;
+}
+
+.bordure-noir {
+  border: 6px solid #00222C;
+}
+
 .fil-ariane {
   padding: 20px 0;
   background-color: #00222C;
@@ -307,8 +315,7 @@ footer .footer i {
   border-radius: 25px;
   height: 260px;
   width: 260px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   transition: transform 0.1s linear;
 }
 .accueil .artistes .card img:hover {
@@ -377,8 +384,7 @@ footer .footer i {
 .asso .top .carousel-trombinoscope img {
   height: 500px;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .asso .trombinoscope {
   padding-top: 100px;
@@ -401,10 +407,8 @@ footer .footer i {
   padding: 20px;
 }
 .asso .trombinoscope .membre .carte img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: top;
-     object-position: top;
+  object-fit: cover;
+  object-position: top;
   height: 100%;
   width: 100%;
 }
@@ -614,8 +618,7 @@ footer .footer i {
 .news .article .card img {
   width: 100%;
   height: 215px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 10px;
 }
 .news .article .card .card-body {
@@ -624,8 +627,8 @@ footer .footer i {
 }
 .news .article .card .card-body .ligne {
   position: absolute;
-  left: -6px;
-  width: 100%;
+  left: -1%;
+  width: 102%;
   height: 6px;
   border-radius: 10px;
 }

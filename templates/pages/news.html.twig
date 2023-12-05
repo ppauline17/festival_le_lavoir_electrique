@@ -21,7 +21,7 @@
         <div class="container">
         {% set bordure = "bordure-orange" %}
         {% set background = "bg-orange" %}
-        {% set row = "row-reverse" %}
+        {% set row = "flex-row-reverse" %}
 
         {% for info in news %}
             {% if bordure == "bordure-bleu" %}
@@ -40,14 +40,14 @@
                 {% set background = "bg-bleu" %}
             {% endif %}
 
-            {% if row == "row-reverse" %}
-                {% set row = "row" %}
-            {% elseif row == "row" %}
-                {% set row = "row-reverse" %}
+            {% if row == "flex-row-reverse" %}
+                {% set row = "flex-row" %}
+            {% elseif row == "flex-row" %}
+                {% set row = "flex-row-reverse" %}
             {% endif %}
 
             <div class="card">
-                <div class="{{ row }} g-0">
+                <div class="d-flex {{ row }} g-0">
                     <div class="col-md-3">
                         <img src="{{ info.image }}" class="img-fluid rounded {{ bordure }}" alt="{{ info.titre }}">
                     </div>
